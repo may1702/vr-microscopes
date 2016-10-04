@@ -105,6 +105,6 @@ public class ZoomLevelController : MonoBehaviour {
     /// <param name="mag">Desired magnification value</param>
     private void SetMagnificationText(MagnificationVal mag) {
         GameObject scopeCanvas = GameObject.Find("ScopeCanvas");
-        scopeCanvas.transform.GetChild(0).GetComponent<Text>().text = "Magnification:" + (mag.ToString().Replace('_', ' '));
+        scopeCanvas.transform.FindChild("MagnificationText").GetComponent<Text>().text = "Magnification:" + (mag.ToString().Replace('_', ' '));
     }
 }
