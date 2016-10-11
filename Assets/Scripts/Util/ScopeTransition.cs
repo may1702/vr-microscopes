@@ -76,6 +76,7 @@ public class ScopeTransition : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
 
+        DisableCullingMaskLayer("Macro", HeadCamRig.GetComponent<Camera>());
         SnapViewToScope();
 
         //Fade in to micro view
